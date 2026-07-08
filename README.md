@@ -17,6 +17,7 @@ The first goal is not to build a large system, but to create a simple browser-ba
 - Write weakness notes
 - Save records using localStorage
 - Display saved study records
+- Display Total Study Time
 
 ## Tech Stack
 

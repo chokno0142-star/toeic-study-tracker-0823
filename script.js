@@ -10,6 +10,7 @@ const mockScoreInput = document.getElementById("mock-score");
 const weaknessNoteInput = document.getElementById("weakness-note");
 const recordsList = document.getElementById("records-list");
 const clearRecordsButton = document.getElementById("clear-records");
+const totalStudyTimeElement = document.getElementById("total-study-time");
 
 function updateDaysLeft() {
   const today = new Date();
@@ -45,6 +46,12 @@ function saveRecords(records) {
 
 function renderRecords() {
   const records = getRecords();
+
+  const totalMinutes = records.reduce((sum, record) => {
+    return sum + Number(record.studyTime || 0);
+  }, 0);
+
+  totalStudyTimeElement.textContent = `合計学習時間：${totalMinutes} 分`;
 
   if (records.length === 0) {
     recordsList.innerHTML = '<p class="empty-message">まだ記録がありません。</p>';

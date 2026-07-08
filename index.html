@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOEIC Study Tracker 0823</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>TOEIC Study Tracker</h1>
+    <p>2026年8月23日午前のTOEICに向けた学習記録アプリ</p>
+  </header>
+
+  <main class="container">
+    <section class="card countdown-card">
+      <h2>本番まで</h2>
+      <p id="days-left" class="days-left">計算中...</p>
+    </section>
+
+    <section class="card">
+      <h2>今日の学習記録</h2>
+
+      <form id="study-form">
+        <label>
+          日付
+          <input type="date" id="study-date" required />
+        </label>
+
+        <label>
+          金フレ学習範囲
+          <input
+            type="text"
+            id="word-range"
+            placeholder="例：supplement2 1-150、730点レベル 1-50"
+          />
+        </label>
+
+        <label>
+          学習時間（分）
+          <input type="number" id="study-time" min="0" placeholder="例：30" />
+        </label>
+
+        <label>
+          模試スコア
+          <input type="text" id="mock-score" placeholder="例：L 320 / R 280 / Total 600" />
+        </label>
+
+        <label>
+          弱点メモ
+          <textarea
+            id="weakness-note"
+            rows="4"
+            placeholder="例：Part 5の品詞問題、Part 3の先読みが弱い"
+          ></textarea>
+        </label>
+
+        <button type="submit">記録する</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="record-header">
+        <h2>記録一覧</h2>
+        <button id="clear-records" class="danger-button" type="button">
+          全削除
+        </button>
+      </div>
+
+      <div id="records-list" class="records-list">
+        <p class="empty-message">まだ記録がありません。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>First milestone: Save TOEIC study records in the browser.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

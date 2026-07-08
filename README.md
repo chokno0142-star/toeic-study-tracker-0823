@@ -37,6 +37,11 @@ This first version does not include:
 
 The first milestone is complete when the app works in the browser and can save study records locally.
 
+## Demo
+
+GitHub Pages:  
+https://chokno0142-star.github.io/toeic-study-tracker-0823/
+
 ## Exam Date
 
 2026-08-23
